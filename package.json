@@ -1,35 +1,45 @@
 {
   "name": "@multiversx/sdk-web-wallet-provider",
-  "version": "5.1.1",
+  "version": "5.2.0-alpha.0",
   "description": "Signing provider for dApps: MultiversX (Web) Wallet",
   "main": "out/index.js",
-  "types": "out/index.d.js",
+  "types": "out/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/multiversx/mx-sdk-js-web-wallet-provider.git"
+  },
   "files": [
     "out/**/*"
   ],
   "scripts": {
     "test": "mocha",
     "compile": "tsc -p tsconfig.json",
-    "pretest": "npm run compile",
+    "pretest": "npm run compile && tsc -p tsconfig.test.json",
     "prepare": "npm run compile"
   },
   "author": "MultiversX",
   "license": "GPL-3.0-or-later",
   "dependencies": {
-    "qs": "6.10.3"
+    "qs": "6.17.1"
   },
   "devDependencies": {
-    "@multiversx/sdk-core": "^15.0.0",
-    "@types/chai": "4.2.11",
-    "@types/mocha": "9.1.0",
-    "@types/node": "17.0.23",
-    "@types/qs": "6.9.7",
-    "chai": "4.2.0",
-    "mocha": "11.1.0",
-    "ts-node": "9.1.1",
-    "typescript": "5.5.4"
+    "@multiversx/sdk-core": "^16.0.0",
+    "@types/chai": "5.2.3",
+    "@types/mocha": "10.0.10",
+    "@types/node": "24.19.2",
+    "@types/qs": "6.15.1",
+    "chai": "6.3.0",
+    "mocha": "12.0.3",
+    "tsx": "4.23.15",
+    "typescript": "7.0.2"
   },
   "peerDependencies": {
-    "@multiversx/sdk-core": "^14.0.0  || ^15.0.0"
+    "@multiversx/sdk-core": "^14.0.0 || ^15.0.0 || ^16.0.0"
+  },
+  "allowScripts": {
+    "esbuild": false,
+    "fsevents": false,
+    "keccak": false,
+    "protobufjs": false
   }
 }
